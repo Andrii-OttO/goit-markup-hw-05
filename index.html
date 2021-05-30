@@ -34,7 +34,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="nav nav-list">
+        <ul class="nav-list">
           <li class="menu-link">
             <a class="nav-adres-contact mail" href="mailto:info@devstudio.com">
               <svg class="icon" width="16" height="12">
@@ -57,9 +57,20 @@
     <main>
       <!-- главный ролик-->
       <section class="hero">
-        <div class="container main-btn">
+        <div class="container main-btn data-modal-open">
           <h1 class="main">Эффективные решения для вашего бизнеса</h1>
-          <button class="button-heroe" type="button">Заказать услугу</button>
+          <button class="button-hero" type="button" data-modal-open>
+            Заказать услугу
+          </button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="close-button data-modal-close">
+              <svg class="close-simvol" width="11" height="11" data-modal-close>
+                <use href="./images/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <!--преимущества компании-->
@@ -122,29 +133,39 @@
         <div class="container">
           <h2 class="title-list">Чем мы занимаемся</h2>
           <ul class="box">
-            <li>
-              <img
-                src="./images/image1.jpg"
-                alt="работа с компьютером"
-                width="370"
-                height="294"
-              />
+            <li class="description-size">
+              <div class="box-description">
+                <img
+                  src="./images/image1.jpg"
+                  alt="работа с компьютером"
+                  width="370"
+                  height="294"
+                />
+                <p class="box-text-description">десктопные приложения</p>
+              </div>
             </li>
-            <li>
-              <img
-                src="./images/image2.jpg"
-                alt="робота с телефоном"
-                width="370"
-                height="294"
-              />
+            <li class="description-size">
+              <div class="box-description">
+                <img
+                  src="./images/image2.jpg"
+                  alt="робота с телефоном"
+                  width="370"
+                  height="294"
+                />
+                <p class="box-text-description">мобильные приложения</p>
+              </div>
             </li>
-            <li>
-              <img
-                src="./images/image3.jpg"
-                alt="робота с планшетом"
-                width="370"
-                height="294"
-              />
+            <li class="description-size">
+              <div class="box-description">
+                <img
+                  src="./images/image3.jpg"
+                  alt="робота с планшетом"
+                  width="370"
+                  class=""
+                  height="294"
+                />
+                <p class="box-text-description">дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -525,6 +546,7 @@
           </ul>
         </div>
       </div>
+      <script src="./js/modal.js"></script>
     </footer>
   </body>
 </html>
