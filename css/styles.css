@@ -18,7 +18,6 @@ img {
 }
 .header {
   padding-top: 24px;
-  padding-bottom: 25px;
   background: var(--background);
 }
 .header-portfolio {
@@ -36,15 +35,16 @@ img {
 }
 .nav-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .nav {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .nav-list {
   display: flex;
   margin-left: auto;
+  align-items: baseline;
 }
 :root {
   --background: #ffffff;
