@@ -165,7 +165,9 @@ h1 {
   border-color: transparent;
   min-height: 38px;
 
-  transition-duration: 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
@@ -513,23 +515,6 @@ address .map {
 .footer-social-list-item:not(:last-child) {
   margin-right: 10px;
 }
-/* .social-list {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 16px;
-}
-
-.social-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-}
-*/
-
 .social-list-link-footer {
   display: flex;
   justify-content: center;
@@ -573,13 +558,10 @@ address .map {
   margin-top: 30px;
   margin-left: 30px;
   flex-basis: calc((100% - 90px) / 3);
-
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.item:hover,
-.item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.item-link-advantage {
+  text-decoration: none;
+  color: inherit;
 }
 .portfolio {
   font-size: 16px;
@@ -599,9 +581,20 @@ address .map {
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
 }
-.item:hover .text-item {
+.item-link-advantage {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.item-link-advantage:hover .text-item,
+.item-link-advantage:focus .text-item {
   transform: translateY(0%);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.item-link-advantage:hover,
+.item-link-advantage:focus {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .text {
   font-style: normal;
